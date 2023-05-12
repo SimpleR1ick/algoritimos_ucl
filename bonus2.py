@@ -16,6 +16,9 @@ tabela = {
 
 # Main function
 def main():
+    """
+    Função principal
+    """
     global tabela
 
     # Variables
@@ -47,7 +50,7 @@ def main():
             if not regiao in tabela:
                 print("Erro! regiao invalida\n")
                 continue
-            
+                         
             # Verifica o tipo de passagem
             if not tipo in ("V", "C"):
                 print("Erro! tipo de passagem invalida")
