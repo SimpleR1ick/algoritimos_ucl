@@ -3,19 +3,19 @@
 #  Autor: Henrique Dalmagro
 
 #############################
-# Fonte code in Python 3.10 #
+# Codigo fonte em Python 3.10 #
 #############################
 
 
 # Main function
 def main():
-    # Variables
+    # Variaveis
 
-    # Data input
+    # Entrada de dados
     
-    # Process
+    # Processamento
 
-    # Data output
+    # Saida de dados
 
     return 0
 
