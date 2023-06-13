@@ -45,8 +45,15 @@ while True:
     print("0 - Encerrar o Sistema")
     print("********************************************\n")
 
-    # Recebendo uma opção
-    opcao = int(input("\nDigite a opção: "))
+    try:
+        # Recebendo uma opção
+        opcao = int(input("\nDigite a opção: "))
+
+    except ValueError: # Erro de conversão
+        print("Erro! digite novamente")
+
+        # Chama o menu novamente
+        continue
 
     # Verifica se esta no primeiro loop, e se a opção não é preencher a matriz
     if count == 0 and opcao != 1:
@@ -112,12 +119,24 @@ while True:
                 soma += matriz[i][i]
 
             print(f"{soma}")
-        # Diagonal secundaria
-        case 6:
-            for i in range(3):
-                soma += matriz[i][-i]
 
-            print(f"{soma}")
+        # Matriz transposta
+        case 6:
+            # Iniciando matriz transposta
+            transposta = []
+
+            for l in range(3):
+                # Criando uma nova linha
+                linha = []
+
+                for c in range(3):
+                    linha.append(matriz[c][l])
+
+                transposta.append(linha)
+
+            # Imprimindo matriz
+            for linha in transposta:
+                print(linha, end="\n")
 
         # Soma quantidade impar e par
         case 7:
